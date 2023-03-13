@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+    <title>Home page</title>
+    </head>
+    <body>
+	{% for x in content %}
+             <p>{{x}}</p>
+             {% if x == "tim" %}
+             {%else%}
+             {%endif%}
+        {% endfor %}
+    </body>
+</html>
+
