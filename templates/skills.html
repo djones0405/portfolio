@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    <html>
+    <head>
+        <title>Skills</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <section>
+            <h3>Web Development</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Python</li>
+                <li>Django</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Graphic Design</h3>
+            <ul>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Sketch</li>
+                <li>InVision</li>
+                <li>Logo Design</li>
+                <li>Layout Design</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Project Management</h3>
+            <ul>
+                <li>Agile Methodologies</li>
+                <li>Scrum</li>
+                <li>Team Management</li>
+                <li>Communication</li>
+                <li>Task Management</li>
+                <li>Problem Solving</li>
+            </ul>
+        </section>
+    </body>
+    </html>
+{% endblock %}

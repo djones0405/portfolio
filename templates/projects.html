@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}My Projects{% endblock %}
+
+{% block content %}
+<div class="browser-window" style="background-color: #00FF7F;">
+    <form method="POST" action="{{ url_for('login') }}">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</div>
+<header>
+    <h1>My Projects</h1>
+</header>
+<div class="content">
+    <div class="project">
+        <h2>Project 1</h2>
+        <p>This is a description of my first project.</p>
+    </div>
+    <div class="project">
+        <h2>Project 2</h2>
+        <p>This is a description of my second project.</p>
+    </div>
+    <div class="project">
+        <h2>Project 3</h2>
+        <p>This is a description of my third project.</p>
+    </div>
+</div>
+{% endblock %}
+

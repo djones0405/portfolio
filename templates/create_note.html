@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<title>Create Note</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body style="background-color: #00FF7F;">
-    <div class="navbar">
+	<div class="navbar">
         <div class="navbar-container", background-color: #00000F;" >
             <div class="navbar-left">
                 <a href="{{ url_for('home') }}">Home</a>
@@ -14,19 +13,19 @@
                 <a href="{{ url_for('projects') }}">Projects</a>
                 <a href="{{ url_for('register') }}">Register</a>
                 <a href="{{ url_for('login') }}">Login</a>
-                <a href="{{ url_for('create_note') }}">New Note</a>
-                {% if note %}
-                    <a href="{{ url_for('view_note', note_id=note.id) }}">View Note</a>
-                {% endif %}
             </div>
         </div>
     </div>
-    {% block content %}{% endblock %}
+
+	<div class="container">
+		<h1>Create a new note</h1>
+		<form action="{{ url_for('create_note') }}" method="POST">
+			<label for="title">Title:</label>
+			<input type="text" id="title" name="title" required>
+			<label for="content">Content:</label>
+			<textarea id="content" name="content" required></textarea>
+			<input type="submit" value="Create note">
+		</form>
+	</div>
 </body>
 </html>
-
-
-
-
-
-

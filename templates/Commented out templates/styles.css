@@ -1,0 +1,9 @@
+
+<style>
+    /* Set the display property of the section elements to flex */
+    section {
+        display: flex;
+        flex-direction: o
+        align-items: center;
+    }
+</style>

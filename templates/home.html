@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to my website!</h1>
+    <p>This is the home page.</p>
+    <div class="browser-container">
+        <ul class="tab-list">
+            <li class="tab active"><a href="#page1">Page 1</a></li>
+            <li class="tab"><a href="#page2">Page 2</a></li>
+            <li class="tab"><a href="#page3">Page 3</a></li>
+        </ul>
+        <div class="browser-window" style="background-color: #20B2AA;">
+            <iframe src="page1.html" id="browser-iframe"></iframe>
+        </div>
+        <div class="browser-window" style="background-color: #f2f2f2;">
+            <iframe src="page2.html"></iframe>
+        </div>
+        <div class="browser-window" style="background-color: #eee;">
+            <iframe src="page3.html"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const iframe = document.querySelector('#browser-iframe');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // deactivate all tabs
+                tabs.forEach(tab => tab.classList.remove('active'));
+
+                // activate clicked tab
+                tab.classList.add('active');
+
+                // change iframe src to match clicked tab
+                const href = tab.querySelector('a').getAttribute('href');
+                iframe.src = href;
+            });
+        });
+    </script>
+{% endblock %}
+
+
+
+

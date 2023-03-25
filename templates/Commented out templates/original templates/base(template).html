@@ -1,0 +1,13 @@
+{% comment %} This template should never be rendered
+blocks  alllow us to use [%block content%}{%endblock%$}to extend a template you will need to use {%extends "name of template you want to extend" %}The template you are extending and base template need to be in the same directory{% endcomment %}<!doctype html>
+<html>
+<head>
+    <title>{% block content %}{% endblock%<}/title>
+    </head>
+    <body>
+        <h1>Tim's Website</h1>
+        <p>Home page content</p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="contact.html">Contact</a></p>
+    </body>
+</html>
