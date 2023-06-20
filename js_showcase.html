@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Showcase</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation Showcase</h1>
+  
+  <button onclick="toggleElementVisibility()">Toggle Element</button>
+  
+  <div id="target-element">
+    <p>This element can be toggled.</p>
+  </div>
+  
+  <button onclick="addNewElement()">Add New Element</button>
+  
+  <div id="element-container">
+    <p>Existing Element</p>
+  </div>
+  
+  <a href="https://github.com/djones0405" target="_blank">GitHub Profile</a>
+  
+  <script>
+    function toggleElementVisibility() {
+      const targetElement = document.getElementById('target-element');
+      targetElement.classList.toggle('hidden');
+    }
+    
+    function addNewElement() {
+      const container = document.getElementById('element-container');
+      const newElement = document.createElement('p');
+      newElement.textContent = 'New Element';
+      container.appendChild(newElement);
+    }
+  </script>
+</body>
+</html>
